@@ -147,8 +147,8 @@ namespace CallOfTheWild
             hunter_class.Archetypes = new BlueprintArchetype[] {divine_hunter_archetype, forester_archetype, feykiller_archetype, primal_companion_hunter, feral_hunter };
             Helpers.RegisterClass(hunter_class);
 
-            Common.addMTDivineSpellbookProgression(hunter_class, hunter_class.Spellbook, "MysticTheurgeHunter",
-                                         Common.createPrerequisiteClassSpellLevel(hunter_class, 2));
+            //Common.addMTDivineSpellbookProgression(hunter_class, hunter_class.Spellbook, "MysticTheurgeHunter",
+            //                             Common.createPrerequisiteClassSpellLevel(hunter_class, 2));
 
 
             createPlanarFocus();
@@ -923,8 +923,52 @@ namespace CallOfTheWild
             hunter_spellbook.name = "HunterSpellbook";
             library.AddAsset(hunter_spellbook, "e1e06d8905884a1faaadd77a3cb5f87a");
             hunter_spellbook.Name = hunter_class.LocalizedName;
-            hunter_spellbook.SpellsPerDay = inquisitor_class.Spellbook.SpellsPerDay;
-            hunter_spellbook.SpellsKnown = inquisitor_class.Spellbook.SpellsKnown;
+            hunter_spellbook.SpellsPerDay = Common.createSpellsTable("HunterSpellsPerDay", "8df02926b66711eaba988d1efc2ca371",
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9),  //0
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9),  //1
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9),  //2
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9),  //3
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9), //4
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9), //5
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9), //6
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9), //7
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9), //8
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9), //9
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9), //10
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9), //11
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9), //12
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9), //13
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9), //14
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9), //15
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9), //16
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9), //17
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9), //18
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9), //19
+                Common.createSpellsLevelEntry(0, 9, 9, 9, 9, 9, 9, 9, 9, 9) //20
+            );
+            hunter_spellbook.SpellsKnown = Common.createSpellsTable("HunterSpellsKnown", "96c7c5e0b66711ea8b561920fc2ca371",
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1),  //0
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1),  //1
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1),  //2
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1),  //3
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1), //4
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1), //5
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1), //6
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1), //7
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1), //8
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1), //9
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1), //10
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1), //11
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1), //12
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1), //13
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1), //14
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1), //15
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1), //16
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1), //17
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1), //18
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1), //19
+                Common.createSpellsLevelEntry(0, 1, 1, 1, 1, 1, 1, 1, 1, 1) //20
+            );
             hunter_spellbook.Spontaneous = true;
             hunter_spellbook.IsArcane = false;
             hunter_spellbook.AllSpellsKnown = false;
@@ -946,10 +990,14 @@ namespace CallOfTheWild
             /* hunter_spellbook.SpellList = library.CopyAndAdd<BlueprintSpellList>("29f3c338532390546bc5347826a655c4", //ranger spelllist
                                                                               "HunterSpellList",
                                                                               "3f0cbe75afe142478facc64fef816b28");*/
-            //add ranger spells      
-            foreach (var spell_level_list in ranger_class.Spellbook.SpellList.SpellsByLevel)
+            // add druid spells
+            foreach (var spell_level_list in druid_class.Spellbook.SpellList.SpellsByLevel)
             {
-                int sp_level = spell_level_list.SpellLevel;              
+                int sp_level = spell_level_list.SpellLevel;
+                if (sp_level > 6)
+                {
+                    //continue;
+                }
                 foreach (var spell in spell_level_list.Spells)
                 {
                     if (!spell.IsInSpellList(hunter_spellbook.SpellList))
@@ -958,14 +1006,11 @@ namespace CallOfTheWild
                     }
                 }
             }
-            //add druid spells      
-            foreach (var spell_level_list in druid_class.Spellbook.SpellList.SpellsByLevel)
+
+            //add ranger spells
+            foreach (var spell_level_list in ranger_class.Spellbook.SpellList.SpellsByLevel)
             {
                 int sp_level = spell_level_list.SpellLevel;
-                if (sp_level > 6)
-                {
-                    continue;
-                }
                 foreach (var spell in spell_level_list.Spells)
                 {
                     if (!spell.IsInSpellList(hunter_spellbook.SpellList))
