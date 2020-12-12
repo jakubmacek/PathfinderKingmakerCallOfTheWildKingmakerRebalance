@@ -122,7 +122,7 @@ namespace CallOfTheWild.Archetypes
             burn_resource.SetIncreasedByStat(0, StatType.Charisma);
 
             var burn_per_round_resource = Helpers.CreateAbilityResource("OverwhelmingSoulBurnPerRoundResource", "", "", "", null);
-            burn_per_round_resource.SetFixedResource(1);
+            burn_per_round_resource.SetFixedResource(2);
 
             mind_over_matter.ReplaceComponent<AddAbilityResources>(a => a.Resource = burn_resource);
             mind_over_matter.ReplaceComponent<AddKineticistPart>(a =>
