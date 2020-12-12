@@ -750,6 +750,9 @@ namespace CallOfTheWild
             oracle_spellbook.CantripsType = CantripsType.Orisions;
             oracle_spellbook.SpellsPerLevel = cleric_class.Spellbook.SpellsPerLevel;
             oracle_spellbook.SpellList = Common.createSpellList("OracleSpellList", "", cleric_class.Spellbook.SpellList, 9);
+            _MyPersonalHacks.AddSpellsFromSpellbook(oracle_spellbook.SpellList, ResourcesLibrary.TryGetBlueprint<BlueprintCharacterClass>("610d836f3a3a9ed42a4349b62f002e96").Spellbook.SpellList); // druid
+            _MyPersonalHacks.AddSpellsFromSpellbook(oracle_spellbook.SpellList, ResourcesLibrary.TryGetBlueprint<BlueprintCharacterClass>("cda0615668a6df14eb36ba19ee881af6").Spellbook.SpellList); // ranger
+            _MyPersonalHacks.AddSpellsFromSpellbook(oracle_spellbook.SpellList, ResourcesLibrary.TryGetBlueprint<BlueprintCharacterClass>("f1a70d9e1b0b41e49874e1fa9052a1ce").Spellbook.SpellList); // inquisitor
             return oracle_spellbook;
         }
 

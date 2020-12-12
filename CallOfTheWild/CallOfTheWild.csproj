@@ -364,6 +364,7 @@
     <Compile Include="Classes\Warpriest.cs" />
     <Compile Include="Features\Wildshape.cs" />
     <Compile Include="Classes\Witch.cs" />
+    <Compile Include="_MyPersonalHacks.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="blueprints.txt">
