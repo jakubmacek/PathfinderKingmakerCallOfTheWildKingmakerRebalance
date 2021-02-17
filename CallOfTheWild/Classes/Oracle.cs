@@ -753,6 +753,8 @@ namespace CallOfTheWild
             _MyPersonalHacks.AddSpellsFromSpellbook(oracle_spellbook.SpellList, ResourcesLibrary.TryGetBlueprint<BlueprintCharacterClass>("610d836f3a3a9ed42a4349b62f002e96").Spellbook.SpellList); // druid
             _MyPersonalHacks.AddSpellsFromSpellbook(oracle_spellbook.SpellList, ResourcesLibrary.TryGetBlueprint<BlueprintCharacterClass>("cda0615668a6df14eb36ba19ee881af6").Spellbook.SpellList); // ranger
             _MyPersonalHacks.AddSpellsFromSpellbook(oracle_spellbook.SpellList, ResourcesLibrary.TryGetBlueprint<BlueprintCharacterClass>("f1a70d9e1b0b41e49874e1fa9052a1ce").Spellbook.SpellList); // inquisitor
+            _MyPersonalHacks.AddSpellsFromSpellbook(oracle_spellbook.SpellList, ResourcesLibrary.TryGetBlueprint<BlueprintCharacterClass>("772c83a25e2268e448e841dcd548235f").Spellbook.SpellList); // bard
+            _MyPersonalHacks.AddPsychicSpells(oracle_spellbook.SpellList);
             return oracle_spellbook;
         }
 
